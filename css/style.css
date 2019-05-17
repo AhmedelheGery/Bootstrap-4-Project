@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 15px; }
+
+.blue-bg {
+  background-color: #1ba1e1;
+  color: #fff; }
+
+.heading {
+  color: #1ba1e1;
+  font-size: 2rem; }
+  .heading::after {
+    content: "";
+    display: block;
+    background-color: #1ba1e1;
+    height: 2px;
+    width: 70px;
+    margin: 10px 0; }
+
+.container-overlay {
+  position: relative;
+  cursor: pointer; }
+  .container-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00aaaa;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out; }
+    .container-overlay .overlay span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff; }
+      .container-overlay .overlay span i {
+        font-size: 2rem; }
+  .container-overlay:hover .overlay {
+    opacity: 1; }
+
+.news-post-fz {
+  font-size: 0.8rem; }
+
+.blog-categoreis ul {
+  list-style: none; }
+  .blog-categoreis ul li {
+    font-size: 0.9rem;
+    padding-left: 1%; }
+    .blog-categoreis ul li i {
+      color: #1ba1e1;
+      margin-right: 3%;
+      font-size: 0.6rem; }
+
+.owl-theme .owl-nav {
+  text-align: right; }
+  .owl-theme .owl-nav button span {
+    font-size: 4rem;
+    background-color: #1ba1e1;
+    color: #fff;
+    padding: 1px 5px;
+    width: 5px; }
+.owl-theme .owl-dots {
+  display: none; }
+
+.contact-box {
+  border-bottom: 4px solid #f5f5f5 !important;
+  font-size: 0.9rem; }
+  .contact-box .lang {
+    z-index: 10; }
+  .contact-box i {
+    cursor: pointer;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all; }
+    .contact-box i:hover {
+      color: #1ba1e1;
+      font-size: 1.2rem; }
+
+.navbar ul .active a {
+  color: #1ba1e1 !important; }
+.navbar ul li .nav-link {
+  color: #353535;
+  font-size: 1rem;
+  padding-left: 1.5rem !important; }
+
+.carousel .carousel-item .carousel-caption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: initial;
+  right: initial;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  transform: translate(-50%, -50%); }
+  .carousel .carousel-item .carousel-caption h2 {
+    font-size: 2.5rem; }
+  .carousel .carousel-item .carousel-caption p {
+    font-size: 0.9rem; }
+  .carousel .carousel-item .carousel-caption button {
+    font-size: 1rem; }
+.carousel .carousel-icon {
+  color: #fff !important;
+  font-size: 3rem !important;
+  border: 2px solid;
+  padding: 5px 10px;
+  opacity: 1; }
+
+.about-us {
+  background-color: #f8f8f8;
+  padding: 6% 0%; }
+  .about-us i {
+    font-size: 3rem; }
+  .about-us h3 {
+    color: #1ba1e1;
+    font-size: 1.3rem; }
+  .about-us p {
+    font-size: 0.8; }
+
+.projects {
+  padding: 6% 0%; }
+
+.counter {
+  background-color: #1ba1e1;
+  color: #fff; }
+  .counter div span {
+    font-size: 3rem; }
+    .counter div span::after {
+      content: "";
+      display: block;
+      background-color: #fff;
+      height: 1px;
+      width: 50px;
+      margin: 8px auto; }
+  .counter div h6 {
+    font-size: 1rem; }
+
+.blog {
+  padding: 6% 0%; }
+  .blog .post {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: stretch; }
+    .blog .post figure {
+      margin-bottom: 0; }
+    .blog .post article {
+      background-color: #f8f8f8;
+      padding: 4%; }
+      .blog .post article span {
+        font-size: 0.9rem; }
+      .blog .post article p {
+        font-size: 0.7rem; }
+      .blog .post article a {
+        font-size: 0.9rem;
+        color: #1ba1e1; }
+
+.in-touch {
+  background-color: #1ba1e1;
+  color: #fff; }
+  .in-touch .container p {
+    font-size: 1rem; }
+  .in-touch .container button {
+    font-size: 1rem; }
+
+.footer {
+  background-color: #161616;
+  color: #e2dfdf;
+  padding: 6% 0%; }
+  .footer div {
+    flex-basis: 24% !important; }
+    .footer div h3 {
+      font-size: 1.2rem; }
+    .footer div p {
+      font-size: 0.9rem; }
+    .footer div ul {
+      list-style: none; }
+      .footer div ul li {
+        font-size: 0.9rem;
+        padding-left: 1%; }
+        .footer div ul li i {
+          color: #1ba1e1;
+          margin-right: 3%;
+          font-size: 0.6rem; }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 10px; } }
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 13px !important; } }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html {
+    font-size: 15px !important; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,333 @@
+// VARIABLES
+
+// COLORS
+$blueColor: #1ba1e1;
+$greyColor: #353535;
+$darkGrey : #161616;
+$whiteColor: #fff;
+$lightGrey: #f8f8f8;
+
+// FONTS
+$lg-font: 15px;
+$md-font: 13px;
+$sm-font: 10px;
+
+// PADDING
+$sectionPadding: 6% 0%;
+
+// MIXINS
+// CENTER ELEMENT
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+// LINE-AFTER
+@mixin line-after($content, $display, $bg, $height, $width, $margin) {
+  content: $content;
+  display: $display;
+  background-color: $bg;
+  height: $height;
+  width: $width;
+  margin: $margin;
+}
+
+// LAYOUT
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: $lg-font;
+}
+.blue-bg{
+  background-color: $blueColor;
+  color: $whiteColor;
+}
+// HEADING CLASS
+.heading{
+  color: $blueColor;
+  font-size: 2rem;
+  &::after {
+    @include line-after("", block, $blueColor, 2px, 70px, (10px 0));
+  }
+}
+// IMAGE OVERLAY CLASS
+.container-overlay{
+  position:relative;
+  // display:inline-block;
+  cursor: pointer;
+
+  .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgb(0,170,170);
+    opacity:0;
+    transition:opacity 500ms ease-in-out;
+
+    span{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      color:#fff;
+
+      i{
+        font-size: 2rem;
+      }
+    }
+  }
+  &:hover .overlay{
+    opacity:1;
+  } 
+}
+.news-post-fz{
+  font-size: 0.8rem;
+}
+.blog-categoreis{
+  ul{
+    list-style: none;
+    li{
+        font-size: 0.9rem;
+        padding-left: 1%;
+        i{
+            color: $blueColor;
+            margin-right: 3%;
+            font-size: 0.6rem;
+        }
+    }
+}
+}
+.owl-theme {
+  .owl-nav {
+    text-align: right;
+    button {
+      span {
+        font-size: 4rem;
+        background-color: $blueColor;
+        color: $whiteColor;
+        padding: 1px 5px;
+        width: 5px;
+      }
+    }
+  }
+  .owl-dots {
+    display: none;
+  }
+}
+
+// START CONTACT-BOX
+.contact-box {
+  border-bottom: 4px solid #f5f5f5 !important;
+  font-size: 0.9rem;
+  .lang{
+    z-index: 10;
+  }
+  i {
+    cursor: pointer;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    &:hover {
+      color: #1ba1e1;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// START NAV-BAR
+.navbar {
+  ul {
+    .active {
+      a {
+        color: $blueColor !important;
+      }
+    }
+    li {
+      .nav-link {
+        color: $greyColor;
+        font-size: 1rem;
+        padding-left: 1.5rem !important;
+      }
+    }
+  }
+}
+
+// START CAROUSEL
+.carousel {
+  .carousel-item {
+    .carousel-caption {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      bottom: initial;
+      right: initial;
+      z-index: 10;
+      color: #fff;
+      text-align: center;
+      transform: translate(-50%, -50%);
+
+      h2{
+          font-size: 2.5rem;
+      }
+      p{
+          font-size: 0.9rem;
+      }
+      button{
+          font-size: 1rem;
+      }
+    }
+  }
+  .carousel-icon {
+    color: #fff !important;
+    font-size: 3rem !important;
+    border: 2px solid;
+    padding: 5px 10px;
+    opacity: 1;
+  }
+}
+
+// START ABOUT-US
+.about-us {
+  background-color: $lightGrey;
+  padding: $sectionPadding;
+  i {
+    font-size: 3rem;
+  }
+  h3 {
+    color: $blueColor;
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 0.8;
+  }
+}
+
+// START PROJECTS
+.projects {
+  padding: $sectionPadding;
+}
+// START COUNTER
+.counter {
+  background-color: $blueColor;
+  color: $whiteColor;
+
+  div {
+    span {
+      font-size: 3rem;
+      &::after {
+        @include line-after("", block, $whiteColor, 1px, 50px, (8px auto));
+      }
+    }
+    h6 {
+      font-size: 1rem;
+    }
+  }
+}
+
+// START BLOG
+.blog {
+  padding: $sectionPadding;
+  .post {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    // justify-content: space-between;
+    align-items: stretch;
+    figure {
+      margin-bottom: 0;
+    }
+    article {
+      background-color: $lightGrey;
+      padding: 4%;
+
+      span {
+        font-size: 0.9rem;
+      }
+      p {
+        font-size: 0.7rem;
+      }
+      a {
+        font-size: 0.9rem;
+        color: $blueColor;
+      }
+    }
+  }
+}
+
+// START IN-TOUCH
+.in-touch{
+    background-color: $blueColor;
+    color: $whiteColor;
+    .container{
+        p{
+            font-size: 1rem;
+        }
+        button{
+            font-size: 1rem;
+        }
+    }
+}
+
+// START FOOTER
+.footer{
+    background-color: $darkGrey;
+    color: rgb(226, 223, 223);
+    padding: $sectionPadding;
+    div{
+        flex-basis: 24% !important;
+        // padding: 2%;
+        h3{
+            font-size: 1.2rem;
+        }
+        p{
+            font-size: 0.9rem;
+        }
+        ul{
+            list-style: none;
+            li{
+                font-size: 0.9rem;
+                padding-left: 1%;
+                i{
+                    color: $blueColor;
+                    margin-right: 3%;
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: $sm-font;
+  }
+  // .contact-box{
+  //     display: none;
+  // }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: $md-font !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html {
+    font-size: $lg-font !important;
+  }
+}
